@@ -647,17 +647,16 @@ ul { list-style: none; }
 .carousel {
   display: flex;
   gap: 24px;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .testimonial-card {
   flex: 0 0 calc(33.333% - 16px);
+  min-width: 280px;
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 32px;
-  scroll-snap-align: start;
   transition: var(--transition);
 }
 .testimonial-card:hover { border-color: rgba(245,197,24,0.3); transform: translateY(-4px); }
@@ -678,33 +677,11 @@ ul { list-style: none; }
 .tc-author strong { display: block; color: var(--white); font-size: 0.92rem; }
 .tc-author span { font-size: 0.78rem; color: var(--grey-mid); }
 .carousel-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-top: 32px;
+  display: none;
 }
-.carousel-controls button {
-  width: 44px; height: 44px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--card-bg);
-  color: var(--white);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: var(--transition);
+.carousel-dots {
+  display: none;
 }
-.carousel-controls button:hover { background: var(--yellow); color: var(--dark-bg); border-color: var(--yellow); }
-.carousel-dots { display: flex; gap: 8px; }
-.dot {
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--border);
-  cursor: pointer;
-  transition: var(--transition);
-}
-.dot.active { background: var(--yellow); width: 24px; border-radius: 100px; }
-
 /* ── LOCATION ───────────────────────────────────────────── */
 .location {
   padding: 100px 0;
